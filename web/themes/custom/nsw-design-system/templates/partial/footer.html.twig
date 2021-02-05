@@ -1,0 +1,20 @@
+<div class="nsw-footer">
+  {% if page.footer_top_first %}
+    <div class="nsw-footer__upper">
+      <div class="nsw-container">{{ page.footer_top_first }}</div>
+    </div>
+  {% endif %}
+  <div class="nsw-footer__lower">
+    <div class="nsw-container">
+      {% if page.footer_bottom %}
+        {{ page.footer_bottom }}
+      {% endif %}
+      {% if page.footer_bottom and page.sub_footer_first %}
+        <hr>
+      {% endif %}
+      {% if page.sub_footer_first %}
+        {{ page.sub_footer_first}}
+      {% endif %}
+    </div>
+  </div>
+</div>

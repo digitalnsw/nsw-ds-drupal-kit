@@ -1,0 +1,12 @@
+<div{{ attributes.addClass('nsw-card') }}>
+  <div{{ region_attributes.content.addClass('nsw-card__content') }}>
+    {{ content.content }}
+    <svg class="nsw-icon nsw-card__icon" focusable="false" aria-hidden="true">
+      <use xlink:href="#arrow"></use>
+    </svg>
+  </div>
+
+  <div{{ region_attributes.image.addClass('nsw-card__image-area') }}>
+    {{ content.image }}
+  </div>
+</div>

@@ -1,0 +1,77 @@
+{# header-container #}
+<div class="nsw-infobar">
+  <div class="nsw-container">
+    <p>A NSW Government website</p>
+  </div>
+</div>
+<header class="nsw-header">
+  <div class="nsw-header__container">
+    <div class="nsw-header__wrapper">
+      <div class="nsw-header__center">
+        {{ page.header_center }}
+      </div>
+
+      <div class="nsw-header__left">
+        <button type="button" class="nsw-header-btn nsw-header-btn--menu js-open-navigation" aria-expanded="false"
+          aria-controls="main-navigation">
+          <svg class="nsw-icon nsw-header-btn__icon" focusable="false" aria-hidden="true">
+            <use xlink:href="#menu"></use>
+            <span class="nsw-header-btn__sub"><span class="sr-only">Open</span> Menu</span>
+          </svg>
+        </button>
+      </div>
+
+      <div class="nsw-header__right">
+        {# Search #}
+        <button type="button" class="nsw-header-btn nsw-header-btn--search js-open-search" aria-expanded="false"
+          aria-controls="header-search">
+          <svg class="nsw-icon nsw-header-btn__icon" focusable="false" aria-hidden="true">
+            <use xlink:href="#search"></use>
+          </svg>
+          <span class="nsw-header-btn__sub"><span class="sr-only">Show</span> Search</span>
+        </button>
+      </div>
+    </div>
+    <div class="nsw-search">
+      <div id="header-search" class="nsw-search__area js-search-area" hidden>
+        <form action="/search" accept-charset="utf-8" method="GET" role="search">
+          <label for="nsw-search__input" class="sr-only">Search site for:</label>
+          <input autocomplete="off" class="nsw-search__input js-search-input" id="nsw-search__input"
+            name="keys" type="text">
+          <svg class="nsw-icon nsw-search__search-icon" focusable="false" aria-hidden="true">
+            <use xlink:href="#search"></use>
+          </svg>
+        </form>
+        <button class="nsw-search__close-btn js-close-search" aria-expanded="true" aria-controls="header-search">
+          <svg class="nsw-icon nsw-search__close-icon" focusable="false" aria-hidden="true">
+            <use xlink:href="#close"></use>
+          </svg>
+          <span class="sr-only">Close search</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+  {% if page.header %}
+    {# header #}
+    <header role="banner" class="clearfix header {{ header_layout_container_class }} {{ header_layout_columns_class }}{{ (header_blocks_paddings) ? ' region--no-block-paddings' : '' }}{{ (header_region_paddings) ? ' region--no-paddings' : '' }}">
+        {# header__container #}
+        <div class="clearfix">
+          <div class="row">
+            {% if page.header %}
+              <div class="{{ header_second_grid_class }}">
+                {# header-second #}
+                <div class="clearfix header-second">
+                  {{ page.header }}
+                </div>
+                {# EOF:header-second #}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+        {# EOF: header__container #}
+    </header>
+    {# EOF: header #}
+  {% endif %}
+{# EOF: header-container #}

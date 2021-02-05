@@ -1,0 +1,32 @@
+{% set site_url = url("<front>")|render %}
+{% set node_url = site_url ~ path('entity.node.canonical', {'node': node.id})[1:] %}
+<section aria-label="Page tools">
+  <ul class="nsw-socials">
+    <li class="nsw-socials__item">
+      <a class="nsw-socials__link" href="https://www.facebook.com/sharer/sharer.php?u={{ node_url|url_encode }}" data-gtm="Facebook" title="Share page on Facebook" target="_blank" rel="noopener nofollow">
+        <svg class="nsw-icon nsw-socials__icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#facebook"></use>
+        </svg>
+        <span class="sr-only">Share on Facebook.</span>
+      </a>
+    </li>
+    <li class="nsw-socials__item"><a href="https://twitter.com/share?text={{ node.label|url_encode }}&amp;url={{ node_url|url_encode }}" class="nsw-socials__link" data-gtm="Twitter" title="Share page on Twitter" target="_blank" rel="noopener nofollow">
+        <svg class="nsw-icon nsw-socials__icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#twitter"></use>
+        </svg>
+        <span class="sr-only">Share on Twitter.</span>
+      </a></li>
+    <li class="nsw-socials__item"><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ node_url|url_encode }}&amp;source={{ "Digital.NSW"|url_encode }}" data-gtm="Linkedin" class="nsw-socials__link" title="Share page on LinkedIn" target="_blank" rel="noopener nofollow">
+        <svg class="nsw-icon nsw-socials__icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#linkedin"></use>
+        </svg>
+        <span class="sr-only">Share on LinkedIn.</span>
+      </a></li>
+    <li class="nsw-socials__item"><a href="mailto:?subject={{ node.label|url_encode }}&amp;body={{ node_url|url_encode }}" class="nsw-socials__link" data-gtm="Email" title="Share page via Email">
+        <svg class="nsw-icon nsw-socials__icon" focusable="false" aria-hidden="true">
+          <use xlink:href="#email"></use>
+        </svg>
+        <span class="sr-only">Email this article.</span>
+      </a></li>
+  </ul>
+</section>

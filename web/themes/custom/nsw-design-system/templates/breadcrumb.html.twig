@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Theme override for a breadcrumb trail.
+ *
+ * Available variables:
+ * - breadcrumb: Breadcrumb trail items.
+ */
+#}
+{# If there's more items than the home page item #}
+{% if breadcrumb and breadcrumb|length > 1 %}
+  <nav aria-label="Breadcrumb" class="nsw-breadcrumb" role="navigation">
+    <ol class="nsw-breadcrumb__list">
+    {% for key, item in breadcrumb %}
+      <li class="nsw-breadcrumb__item">
+        {% if item.url %}
+          {% if loop.last %}
+            <a class="nsw-breadcrumb__link nsw-breadcrumb--current" href="{{ item.url }}">{{ item.text }}</a>
+          {% else %}
+            <a class="nsw-breadcrumb__link" href="{{ item.url }}">{{ item.text }}</a>
+          {% endif %}
+        {% else %}
+          {{ item.text }}
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ol>
+  </nav>
+{% endif %}
