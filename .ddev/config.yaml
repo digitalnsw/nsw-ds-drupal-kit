@@ -1,4 +1,4 @@
-name: nsw-ds-drupal
+name: nsw-ds-drupal-kit
 type: drupal9
 docroot: web
 php_version: "7.3"
