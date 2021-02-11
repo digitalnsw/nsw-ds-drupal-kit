@@ -12,7 +12,7 @@ View the demo [here](https://dev-drupal-dev-kit-demo.pantheonsite.io)
 - [Support](#support)
 
 ## Local Development
-
+Note: You may set up your local manually, with Acquia Cloud or even Docker. This step is optional if you prefer other ways to setup.
 
 1. Download DDEV
     ```
@@ -74,7 +74,7 @@ fe-src
 └───scss
      main.scss
 ```
-fe-srce/scss/main.scss
+In fe-srce/scss/main.scss:
 ```css
 @import 'node_modules/nsw-design-system/src/main.scss';
 
