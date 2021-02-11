@@ -1,6 +1,8 @@
 # NSW Design System Drupal Kit
 
-NSW Design System Drupal Kit is a dev starter kit for starting a Drupal 9 site using the NSW Design System theme.
+NSW Design System Drupal Kit is a dev starter kit for starting a Drupal 9 site using the [NSW Design System theme](https://github.com/digitalnsw/nsw-design-system).
+
+View the demo [here](https://dev-drupal-dev-kit-demo.pantheonsite.io)
 
 ## Table of Contents
 
