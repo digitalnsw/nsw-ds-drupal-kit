@@ -74,7 +74,7 @@ fe-src
 └───scss
      main.scss
 ```
-In fe-srce/scss/main.scss:
+In fe-src/scss/main.scss:
 ```css
 @import 'node_modules/nsw-design-system/src/main.scss';
 
